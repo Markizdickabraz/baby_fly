@@ -43,11 +43,37 @@ ul {
 }
 /* контейнер */
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .img {
@@ -56,6 +82,7 @@ ul {
 .header-content {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .logo {
@@ -79,15 +106,25 @@ ul {
   padding-bottom: 32px;
 }
 /* стилізація іконок контакт */
-.contact-container {
-  margin-left: auto;
-}
 
 .contact-list {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .contact-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .contact-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 .contact-link {
   display: flex;
   flex-direction: row-reverse;
@@ -104,24 +141,17 @@ ul {
 }
 
 .hero {
-  width: 99%;
+  background-image: linear-gradient(
+      180deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0) 100%
+    ),
+    url("./img/hero-mobile.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 480px;
   height: 100%;
-}
-
-@media screen and(min-width: 480px) {
-  .hero {
-    background-image: linear-gradient(
-        180deg,
-        rgba(47, 48, 58, 0.4) 0%,
-        rgba(47, 48, 58, 0) 100%
-      ),
-      url("./img/hero-mobile.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-width: 480px;
-    height: 600px;
-    background-position: center;
-  }
+  background-position: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,8 +161,7 @@ ul {
         rgba(47, 48, 58, 0.4) 0%,
         rgba(47, 48, 58, 0) 100%
       ),
-      url("./img/hero-mobile.jpeg");
-    min-height: 700px;
+      url("./img/hero.jpeg");
     background-size: cover;
   }
 }
@@ -166,6 +195,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin-top: 12px;
+  padding-bottom: 40px;
 }
 
 .hero__icon {
@@ -175,15 +205,27 @@ ul {
 .hero__icon:focus {
   fill: var(--accent-color);
 }
-.about__title {
-  visibility: hidden;
+.about {
+  padding-top: 80px;
 }
 
 .about__list {
   display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
   list-style: none;
-  padding-top: 80px;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .about__item {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__item {
+    width: 250px;
+  }
 }
 
 .about__item {
@@ -191,7 +233,6 @@ ul {
   gap: 10px;
   flex-direction: column;
   align-items: center;
-  width: 160px;
 }
 .about__img-container {
   border-radius: 10px;
