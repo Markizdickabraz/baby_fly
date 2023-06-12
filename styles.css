@@ -278,6 +278,7 @@ pre {
   object-fit: cover;
   border-radius: 10px;
   transition: all 250ms;
+  display: block;
 }
 
 .gallery__text {
@@ -287,8 +288,6 @@ pre {
 
 .gallery__link {
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
   height: 100%;
 }
 
@@ -301,10 +300,11 @@ pre {
   transform: translateY(101%);
   color: var(--white-color);
   transition: transform 250ms var(--cubic-bezier);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 12px;
 }
 
 .gallery__link:hover,
