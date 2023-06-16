@@ -17,6 +17,7 @@
   --color-bg-overlay: #f3cd21c7;
   --color-backdrop-modal: rgba(0, 0, 0, 0.2);
   --border-modal-icon: rgba(0, 0, 0, 0.1);
+  --btn__overlay: #ffe985;
 }
 /* боді */
 body {
@@ -298,7 +299,7 @@ pre {
   height: 100%;
 }
 
-.gallery__item-text--overlay {
+.gallery__item--overlay {
   display: block;
   position: absolute;
   top: 0;
@@ -315,7 +316,7 @@ pre {
 }
 
 .gallery__link:hover,
-.gallery__link:hover .gallery__item-text--overlay,
+.gallery__link:hover .gallery__item--overlay,
 .gallery__link:hover .gallery__item-img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -330,7 +331,89 @@ pre {
   overflow: hidden;
 }
 
+.btn__overlay-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn__overlay {
+  padding: 8px 10px 8px 10px;
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: var(--btn__overlay);
+  cursor: pointer;
+}
+
+.btn__overlay:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
 .footer {
   background-color: var(--footer-bgc-color);
   height: 180px;
+}
+
+/* modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-backdrop-modal);
+  opacity: 1;
+  transition: opacity 250ms var(--cubic-bezier);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  width: 96%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--white-color);
+  transform: translate(-50%, -50%) scale(1);
+  padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  fill: var(--header-logo-color);
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-modal-icon);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: fill 250ms var(--cubic-bezier);
+}
+
+.modal__button :hover,
+.modal__button :focus {
+  fill: var(--accent-color);
 }
