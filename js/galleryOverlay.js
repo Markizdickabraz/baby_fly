@@ -3,6 +3,8 @@ const backdrop = document.querySelector('[data-modal]')
 console.dir(backdrop)
 
 gallery.addEventListener('click', renderModal)
+const button = document.querySelector('.btn__overlay')
+console.log(button)
 
 function renderModal(e) {
     e.preventDefault();
@@ -11,7 +13,10 @@ function renderModal(e) {
     }
 
     if (e.target.nodeName === 'BUTTON') {
-        e.addEventListener('click', toggleModal())
+        button.addEventListener('click', toggleModal())
+        // const pulse_hand = document.querySelectorAll('#pulse-icon');
+        // console.log(pulse_hand);
+        // pulse_hand.style.display = 'none'; 
         if (e.target.id === '3v1') {
         console.log('dadadaa')
         }        

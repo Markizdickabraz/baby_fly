@@ -395,14 +395,15 @@ pre {
   }
 }
 
-.modal__button {
+.modal__button-close {
   position: absolute;
+  padding: 0;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
   text-decoration: none;
-  fill: var(--header-logo-color);
+  color: var(--header-logo-color);
   background-color: var(--white-color);
   display: flex;
   justify-content: center;
@@ -410,19 +411,23 @@ pre {
   border: 1px solid var(--border-modal-icon);
   border-radius: 50%;
   cursor: pointer;
-  transition: fill 250ms var(--cubic-bezier);
+  transition: color 250ms var(--cubic-bezier);
+  outline: none;
 }
 
-.modal__button :hover,
-.modal__button :focus {
+.modal__button-close :hover,
+.modal__button-close :focus {
   fill: var(--accent-color);
+}
+
+.modal__button-icon {
+  fill: currentColor;
 }
 /* pulse icon */
 #pulse-icon {
   position: absolute;
   top: 80%;
   left: 80%;
-  z-index: 1000;
   animation: pulse 1s infinite;
 }
 
