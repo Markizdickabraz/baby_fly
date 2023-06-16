@@ -417,3 +417,28 @@ pre {
 .modal__button :focus {
   fill: var(--accent-color);
 }
+/* pulse icon */
+#pulse-icon {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  z-index: 1000;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse_hand {
+  fill: var(--color-bg-overlay);
+  stroke: var(--color-bg-overlay);
+}
