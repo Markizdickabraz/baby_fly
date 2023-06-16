@@ -423,6 +423,19 @@ pre {
 .modal__button-icon {
   fill: currentColor;
 }
+
+.modal__list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.modal__item {
+  width: 33%;
+}
+
 /* pulse icon */
 #pulse-icon {
   position: absolute;
