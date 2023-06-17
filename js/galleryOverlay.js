@@ -14,11 +14,11 @@ function renderModal(e) {
     if (e.target.nodeName === 'BUTTON') {
         button.addEventListener('click', toggleModal())
         if (e.target.id === '3v1') {
-            moadlBody('./img/3v12.jpeg','./img/3v13.jpeg','./img/3v14.jpeg' )
+            moadlBody('./img/3v12.jpeg', './img/3v13.jpeg', './img/3v14.jpeg')
 
         }        
         if (e.target.id === 'bunnySwing') {
-            moadlBody('./img/bunnySwing.jpeg' , './img/bunnySwing2.jpeg' , './img/bunnySwing3.jpeg')
+            moadlBody('./img/bunnySwing.jpeg', './img/bunnySwing2.jpeg', './img/bunnySwing3.jpeg')
         }
     }
 }
