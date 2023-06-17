@@ -122,6 +122,12 @@ ul {
   fill: var(--icon-color);
   transition: color 250ms var(--cubic-bezier), fill 250ms var(--cubic-bezier);
 }
+@media screen and (max-width: 768px) {
+  .contact-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
@@ -133,10 +139,6 @@ ul {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
-  }
-  .contact-link {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }
 
