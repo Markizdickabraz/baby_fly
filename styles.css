@@ -107,19 +107,6 @@ ul {
   list-style: none;
   gap: 20px;
 }
-
-@media screen and (max-width: 768px) {
-  .contact-list {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .contact-link {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
 .contact-link {
   display: flex;
   flex-direction: row-reverse;
@@ -139,6 +126,18 @@ ul {
 .contact-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .contact-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .hero {
