@@ -472,17 +472,20 @@ ul {
 }
 
 .modal__list {
-  list-style: none;
   display: flex;
   gap: 10px;
-  height: 100%;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 .modal__item {
-  width: 33%;
+  width: 40%;
 }
-
+.modal__img {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
 /* pulse icon */
 #pulse-icon {
   position: absolute;
