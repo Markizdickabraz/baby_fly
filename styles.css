@@ -486,6 +486,13 @@ ul {
   object-fit: cover;
   object-position: 50% 50%;
 }
+
+@media screen and (max-width: 400px) {
+  .modal__img {
+    width: 120px;
+    height: 140px;
+  }
+}
 /* pulse icon */
 #pulse-icon {
   position: absolute;
