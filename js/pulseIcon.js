@@ -1,2 +1,2 @@
-var icon = document.getElementById('pulse-icon');
+const icon = document.getElementById('pulse-icon');
 icon.classList.add('pulse');
