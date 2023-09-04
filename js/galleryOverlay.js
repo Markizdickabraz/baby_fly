@@ -1,4 +1,4 @@
-const galleryList = document.querySelector('.gallery__list');
+const galleryList = document.querySelector('.slick-list');
 const backdrop = document.querySelector('[data-modal]')
 
 galleryList.addEventListener('click', renderModal)
@@ -6,8 +6,10 @@ const button = document.querySelector('.btn__overlay')
 const gallery = document.querySelector('.gallery');
 
 function renderModal(e) {
-    e.preventDefault();
-    if (e.target.nodeName !== 'IMG' && e.target.nodeName !== 'PRE' && e.target.nodeName !== 'H3' && e.target.nodeName !== 'BUTTON') {
+  e.preventDefault();
+  console.dir(e.target)
+  if (e.target.nodeName !== 'IMG' && e.target.nodeName !== 'PRE' && e.target.nodeName !== 'H3' && e.target.nodeName !== 'BUTTON')
+  {
         return;
     }
     if (e.target.nodeName === 'BUTTON') {
@@ -105,15 +107,3 @@ function modalBody(photo1, photo2, photo3, photo4, photo5, photo6) {
         console.log(e); // some usefull information
     });
 }
-
-
-
-
-
-
-        // <li class= modal__item><img class='modal__img' width= 150 height= 160 src=${photo1} alt="swing"></li>
-        // <li class= modal__item><img class='modal__img' width= 150 height= 160 src=${photo2} alt="swing"></li>
-        // <li class= modal__item><img class='modal__img' width= 150 height= 160 src=${photo3} alt="swing"></li>
-        // <li class= modal__item><img class='modal__img' width= 150 height= 160 src=${photo4} alt="swing"></li>
-        // <li class= modal__item><img class='modal__img' width= 150 height= 160 src=${photo5} alt="swing"></li>
-        // <li class= modal__item><img class='modal__img' width= 150 height= 160 src=${photo6} alt="swing"></li>

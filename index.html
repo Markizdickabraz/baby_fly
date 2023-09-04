@@ -21,6 +21,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
 </head>
 
 <body>
@@ -93,19 +96,19 @@
         </section>
         <section class="gallery-card container">
             <h2 class="gallery__title">Галерія товарів</h2>
-            <ul class="gallery__list">
-
-                <li class="gallery__item">
-                    <a href="" class="gallery__link">
-                        <div class="gallery__overlay-box">
-                            <img class="gallery__item-img" src="./img/3v1.jpeg" alt="swing 3in1 photo">
-                            <div id="pulse-icon">
-                                <svg width="22" height="30" class="pulse_hand">
-                                    <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
-                                </svg>
-                            </div>
-                            <div class="gallery__item--overlay">
-                                <pre class="gallery__item-text--overlay">
+            <ul class="gallery__list swiper-container">
+                <div class="swiper-wrapper gallery__position">
+                    <li class="gallery__item swiper-slide" autoplay='2000'>
+                        <a href="" class="gallery__link">
+                            <div class="gallery__overlay-box">
+                                <img class="gallery__item-img" src="./img/3v1.jpeg" alt="swing 3in1 photo">
+                                <!-- <div id="pulse-icon">
+                                    <svg width="22" height="30" class="pulse_hand">
+                                        <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
+                                    </svg>
+                                </div> -->
+                                <div class="gallery__item--overlay">
+                                    <pre class="gallery__item-text--overlay">
 Основа з рогожки та бавовняні
     подушки чи матрасик- 1350грн.
                             
@@ -134,26 +137,27 @@
 Вони дуже компактні, займають мало місця.
 Можна взяти із собою у дорогу, подорож, на природу.
                                         </pre>
-                                <div class="btn__overlay-container">
-                                    <button type="button" class="btn__overlay" id="3v1">більше фото</button>
+                                    <div class="btn__overlay-container">
+                                        <button type="button" class="btn__overlay" id="3v1">більше фото</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <h3 class="gallery__text">3в1</h3>
-                </li>
+                            <h3 class="gallery__text">3в1</h3>
+                        </a>
+                    </li>
 
-                <li class="gallery__item">
-                    <a href="" class="gallery__link">
-                        <div class="gallery__overlay-box">
-                            <img class="gallery__item-img" src="./img/bunnySwing3.jpeg" alt="swing bunny swing photo">
-                            <div id="pulse-icon">
-                                <svg width="22" height="30" class="pulse_hand">
-                                    <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
-                                </svg>
-                            </div>
-                            <div class="gallery__item--overlay">
-                                <pre class="gallery__item-text--overlay">
+                    <li class="gallery__item swiper-slide" autoplay='2000'>
+                        <a href="" class="gallery__link">
+                            <div class="gallery__overlay-box">
+                                <img class="gallery__item-img" src="./img/bunnySwing3.jpeg"
+                                    alt="swing bunny swing photo">
+                                <!-- <div id="pulse-icon">
+                                    <svg width="22" height="30" class="pulse_hand">
+                                        <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
+                                    </svg>
+                                </div> -->
+                                <div class="gallery__item--overlay">
+                                    <pre class="gallery__item-text--overlay">
 Для малюків від 6-7 місяців
 (коли вже впевнено сидить)
 і приблизно до 4 років.
@@ -173,27 +177,27 @@
 
 Ціна 975 грн
                                         </pre>
-                                <div class="btn__overlay-container">
-                                    <button type="button" class="btn__overlay" id="bunnySwing">більше фото</button>
+                                    <div class="btn__overlay-container">
+                                        <button type="button" class="btn__overlay" id="bunnySwing">більше фото</button>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
-                    </a>
-                    <h3 class="gallery__text">bunny swing</h3>
-                </li>
-
-                <li class="gallery__item">
-                    <a href="" class="gallery__link">
-                        <div class="gallery__overlay-box">
-                            <img class="gallery__item-img" src="./img/cot.jpeg" alt="swing cot photo">
-                            <div id="pulse-icon">
-                                <svg width="22" height="30" class="pulse_hand">
-                                    <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
-                                </svg>
                             </div>
-                            <div class="gallery__item--overlay">
-                                <pre class="gallery__item-text--overlay">
+                            <h3 class="gallery__text">bunny swing</h3>
+                        </a>
+                    </li>
+
+                    <li class="gallery__item swiper-slide " autoplay='2000'>
+                        <a href="" class="gallery__link">
+                            <div class="gallery__overlay-box">
+                                <img class="gallery__item-img" src="./img/cot.jpeg" alt="swing cot photo">
+                                <!-- <div id="pulse-icon">
+                                    <svg width="22" height="30" class="pulse_hand">
+                                        <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
+                                    </svg>
+                                </div> -->
+                                <div class="gallery__item--overlay">
+                                    <pre class="gallery__item-text--overlay">
  Основа з рогожки, матрацик - бавовна
 
 Підходить для дітей від 2-3 місяців
@@ -220,34 +224,35 @@
 
 Ціна 1250 грн
              </pre>
-                                <div class="btn__overlay-container">
-                                    <button class="btn__overlay" id="cot">більше фото</button>
+                                    <div class="btn__overlay-container">
+                                        <button class="btn__overlay" id="cot">більше фото</button>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
-                    </a>
-                    <h3 class="gallery__text">люлька</h3>
-                </li>
-
-                <li class="gallery__item">
-                    <a href="" class="gallery__link">
-                        <div class="gallery__overlay-box">
-                            <img class="gallery__item-img" src="./img/hunnyBunny4.jpeg" alt="swing hunny bunny photo">
-                            <div id="pulse-icon">
-                                <svg width="22" height="30" class="pulse_hand">
-                                    <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
-                                </svg>
                             </div>
-                            <div class="gallery__item--overlay">
-                                <pre class="gallery__item-text--overlay">
+                            <h3 class="gallery__text">люлька</h3>
+                        </a>
+                    </li>
+
+                    <li class="gallery__item swiper-slide" autoplay='2000'>
+                        <a href="" class="gallery__link">
+                            <div class="gallery__overlay-box">
+                                <img class="gallery__item-img" src="./img/hunnyBunny4.jpeg"
+                                    alt="swing hunny bunny photo">
+                                <!-- <div id="pulse-icon">
+                                    <svg width="22" height="30" class="pulse_hand">
+                                        <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
+                                    </svg>
+                                </div> -->
+                                <div class="gallery__item--overlay">
+                                    <pre class="gallery__item-text--overlay">
 1 м'яка подушечка і великий матрасик-бортик
 з зав'язками.
 Їх можна міняти місцями.
                         
 На передній перекладині м'який захист.
-На кнопках,щоб в майбутньому можна зняти і попрати або прибрати за
-необхідності.
+На кнопках,щоб в майбутньому можна зняти і попрати або
+прибрати за необхідності.
 
 Для малюків від 6-7 місяців
 (коли вже впевнено сидить)
@@ -263,32 +268,32 @@
 - 4 дерев'яні бусини;
 - 2 канати по 3,5 м
 - 1 карабін
-                        - 1 кріплення на вибір у дерево чи бетон
+- 1 кріплення на вибір у дерево чи бетон
                         
 З'ємні китиці та мішечок для розвитку
 дрібної моторики в ПОДАРУНОК.
 
 Ціна 1250 грн                            </pre>
-                                <div class="btn__overlay-container">
-                                    <button class="btn__overlay" id="hunnyBunny">більше фото</button>
+                                    <div class="btn__overlay-container">
+                                        <button class="btn__overlay" id="hunnyBunny">більше фото</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <h3 class="gallery__text">hunny bunny</h3>
-                </li>
+                            <h3 class="gallery__text">hunny bunny</h3>
+                        </a>
+                    </li>
 
-                <li class="gallery__item">
-                    <a href="" class="gallery__link">
-                        <div class="gallery__overlay-box">
-                            <img class="gallery__item-img" src="./img/standart6.jpeg" alt="swing standart photo">
-                            <div id="pulse-icon">
-                                <svg width="22" height="30" class="pulse_hand">
-                                    <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
-                                </svg>
-                            </div>
-                            <div class="gallery__item--overlay">
-                                <pre class="gallery__item-text--overlay">
+                    <li class="gallery__item swiper-slide" autoplay='2000'>
+                        <a href="" class="gallery__link">
+                            <div class="gallery__overlay-box">
+                                <img class="gallery__item-img" src="./img/standart6.jpeg" alt="swing standart photo">
+                                <!-- <div id="pulse-icon">
+                                    <svg width="22" height="30" class="pulse_hand">
+                                        <use href="./img/svg/icon-sprite.svg#pulse_hand"></use>
+                                    </svg>
+                                </div> -->
+                                <div class="gallery__item--overlay">
+                                    <pre class="gallery__item-text--overlay">
 Для малюків від 6-7 місяців
     (коли вже впевнено сидить)
     і приблизно до 4 років.
@@ -309,15 +314,15 @@
 
 Ціна 750 грн
                                                         </pre>
-                                <div class="btn__overlay-container">
-                                    <button class="btn__overlay" id="standart">більше фото</button>
+                                    <div class="btn__overlay-container">
+                                        <button class="btn__overlay" id="standart">більше фото</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <h3 class="gallery__text">стандарт</h3>
-                </li>
-
+                            <h3 class="gallery__text">стандарт</h3>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </section>
     </main>
@@ -376,7 +381,17 @@
             </button>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Підключення бібліотеки Slick Carousel -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="./js/slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
     <script src="./js/galleryOverlay.js" type="module"></script>
     <script src="./js/openTelegram.js"></script>

@@ -265,25 +265,27 @@ ul {
 
 .gallery-card {
   padding-top: 80px;
+  padding-bottom: 60px;
 }
 .gallery__title {
   text-align: center;
   color: var(--title-color);
+  padding-bottom: 50px;
 }
 
-.gallery__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  list-style: none;
-  padding-top: 20px;
-  padding-bottom: 40px;
+.swiper-slide {
+  z-index: 1;
+}
+
+.slick-slide {
+  width: 400px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .gallery__item-img {
-  width: 180px;
-  height: 240px;
+  width: 100%;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
   transition: all 250ms;
@@ -308,12 +310,13 @@ ul {
   background-color: var(--color-bg-overlay);
   transform: translateY(101%);
   color: var(--header-logo-color);
-  transition: transform 250ms var(--cubic-bezier);
+  transition: transform 500ms var(--cubic-bezier);
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 16px;
   padding-right: 16px;
-  font-size: 12px;
+  font-size: 10px;
+  opacity: 0;
 }
 
 .gallery__link:hover,
@@ -323,8 +326,13 @@ ul {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   overflow: visible;
   transform: translateY(0);
-  width: 380px;
-  height: 440px;
+  opacity: 1;
+  width: 100%;
+  height: 500px;
+}
+
+.gallery__link:hover {
+  transition: transform 0.5s var(--cubic-bezier);
 }
 
 .gallery__overlay-box {
@@ -398,12 +406,9 @@ ul {
   background-color: var(--accent-color);
 }
 
-/* .footer__soc-network-icon {
-  width: 20px;
-  height: 20px;
-} */
 /* modal */
 .backdrop {
+  z-index: 998;
   position: fixed;
   top: 0;
   left: 0;
@@ -420,6 +425,7 @@ ul {
 }
 
 .modal {
+  z-index: 999;
   width: 96%;
   position: absolute;
   top: 50%;
@@ -492,11 +498,19 @@ ul {
     height: 140px;
   }
 }
+
+#slick-slide-control00::before,
+#slick-slide-control01::before,
+#slick-slide-control02::before,
+#slick-slide-control03::before,
+#slick-slide-control04::before {
+  font-size: 24px;
+}
 /* pulse icon */
-#pulse-icon {
+/* #pulse-icon {
   position: absolute;
-  top: 80%;
-  left: 80%;
+  top: 90%;
+  left: 60%;
   animation: pulse 1s infinite;
 }
 
@@ -515,4 +529,4 @@ ul {
 .pulse_hand {
   fill: var(--color-bg-overlay);
   stroke: var(--color-bg-overlay);
-}
+} */
